@@ -1,0 +1,171 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #111111); /* Hitam elegan */
+  color: #ffd700; /* Emas */
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Header Styles */
+.header {
+  font-size: 2.5rem;
+  color: #ffd700; /* Emas */
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(255, 215, 0, 0.5);
+  animation: slideDown 1s ease-out;
+}
+
+/* Description */
+.description {
+  color: #f8b400; /* Kuning keemasan */
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Button Styles */
+.scan-btn {
+  background: linear-gradient(135deg, #ffd700, #f8b400); /* Gradasi emas */
+  color: #1e1e1e; /* Hitam */
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+.scan-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Scanner Container */
+.scanner-container {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  margin: 20px auto;
+  border: 5px solid #ffd700; /* Emas */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  animation: fadeInUp 1.5s ease-in;
+}
+
+.scanner-video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Scanner Controls */
+.scanner-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.control-btn {
+  background: rgba(255, 215, 0, 0.8); /* Warna emas semi transparan */
+  color: #1e1e1e; /* Hitam */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.control-btn:hover {
+  background: rgba(255, 215, 0, 1); /* Lebih cerah */
+  transform: scale(1.1);
+}
+
+.stop-btn {
+  background-color: #c0392b; /* Merah gelap */
+  color: white;
+}
+
+.stop-btn:hover {
+  background-color: #e74c3c; /* Merah lebih terang */
+}
+
+/* Error and Success Messages */
+.error {
+  color: #e74c3c; /* Merah */
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation: shake 0.5s ease;
+}
+
+.success {
+  color: #27ae60; /* Hijau */
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
